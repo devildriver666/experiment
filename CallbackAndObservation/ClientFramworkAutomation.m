@@ -9,9 +9,12 @@
 #import "ClientFramworkAutomation.h"
 
 #import "NSTimer+Blocks.h"
+#import "ViewController.h"
+
 
 @implementation ClientFramworkAutomation
 @synthesize dataModelFirst,dataModelSecond,delegate;
+
 
 +(id)sharedManager {
     
@@ -27,8 +30,17 @@
     if (self = [super init]) {
         
         dataModelFirst = [[ServiceDatamodel alloc]init];
+        
+        //Just an example for Key Value Coading. Assigning initial value.
+        [dataModelFirst setValue:[NSNumber numberWithDouble:1.0] forKeyPath:@"fetchedValue"];
         dataModelSecond = [[ServiceDatamodel alloc]init];
         
+        //Fetching initial value for example.
+        NSString *initialNumber = [dataModelFirst valueForKey:@"fetchedValue"];
+        NSLog(@"initial value = %@", initialNumber);
+        
+        
+
     }
     return self;
 }
@@ -41,23 +53,22 @@
                                    userInfo:nil
                                     repeats:YES];
 }
+
+
 -(void)runLoopWithBlock:(CallBackBlock)serviceCallback{
     
-   
-   
-    [NSTimer scheduledTimerWithTimeInterval:2.0 block:^
+   [NSTimer scheduledTimerWithTimeInterval:2.0 block:^
     {
         dataModelSecond.fetchedValue = (double)rand();
         serviceCallback(dataModelSecond.fetchedValue);
         
     } repeats:YES];
-
 }
 -(void)findData{
 
     dataModelFirst.fetchedValue = (double)rand();
-    
     [[self delegate] getData:dataModelFirst.fetchedValue];
 }
+
     
 @end

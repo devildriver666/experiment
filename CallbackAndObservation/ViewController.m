@@ -31,7 +31,22 @@
         _blockValueLevel.text = [NSString stringWithFormat:@"%f",value ];
     }];
         
-	// Do any additional setup after loading the view, typically from a nib.
+	// add observer to see changes in first model
+    
+    //Add observer for fetch data
+    
+    
+    [((ClientFramworkAutomation*)[ClientFramworkAutomation sharedManager]).dataModelFirst addObserver:self forKeyPath:@"fetchedValue" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
+}
+
+//Observation call back
+
+-(void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary *)change context:(void *)context
+{
+    if([keyPath isEqualToString:@"fetchedValue"])
+    {
+        NSLog(@"observed value = %@", [change objectForKey:NSKeyValueChangeNewKey]);
+    }
 }
 
 //delegate call back
