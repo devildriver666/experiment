@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>C7A21412-0D37-494A-A304-AEBC7F8616CA</string>
+	<key>IDESourceControlProjectName</key>
+	<string>CallbackAndObservation</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>524B4FC8-3F05-4D79-993B-96EC62744C21</key>
+		<string>svn://182.74.16.202</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>Architecture/CallbackAndObservation/CallbackAndObservation.xcodeproj/project.xcworkspace</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>524B4FC8-3F05-4D79-993B-96EC62744C21</key>
+		<string>../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectRepositoryRootDictionary</key>
+	<dict>
+		<key>524B4FC8-3F05-4D79-993B-96EC62744C21</key>
+		<string>svn://182.74.16.202</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>svn://182.74.16.202/Architecture/CallbackAndObservation/CallbackAndObservation.xcodeproj</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>110</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>524B4FC8-3F05-4D79-993B-96EC62744C21</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryBranchesRelativeLocationKey</key>
+			<string>branches</string>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.subversion</string>
+			<key>IDESourceControlRepositoryTagsRelativeLocationKey</key>
+			<string>tags</string>
+			<key>IDESourceControlRepositoryTrunkRelativeLocationKey</key>
+			<string>trunk</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>524B4FC8-3F05-4D79-993B-96EC62744C21</string>
+			<key>IDESourceControlWCCName</key>
+			<string>_workarea</string>
+		</dict>
+	</array>
+</dict>
+</plist>
