@@ -19,6 +19,7 @@
 {
     [super viewDidLoad];
     
+    //Start hearbeat service.
     [[ClientFramworkAutomation sharedManager] startAutomation];
     
     //set GetDataDelegate to self to receive callback.
@@ -31,7 +32,7 @@
     }];
         
 	
-    //Add observer to see data change in first Service Datamodel object object.
+    //Add observer to see data change in first Service Datamodel object, basically check if value of fetchValue is chaning or not.
     [((ClientFramworkAutomation*)[ClientFramworkAutomation sharedManager]).dataModelFirst addObserver:self forKeyPath:@"fetchedValue" options:NSKeyValueObservingOptionNew | NSKeyValueObservingOptionOld context:nil];
 }
 

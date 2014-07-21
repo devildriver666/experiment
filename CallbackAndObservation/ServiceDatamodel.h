@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface ServiceDatamodel : NSObject<NSCoding>
+@interface ServiceDatamodel : NSObject
 //@property(nonatomic,strong) NSString *name, *place, *ssn;
 @property(nonatomic)double fetchedValue;
 

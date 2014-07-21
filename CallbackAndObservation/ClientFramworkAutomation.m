@@ -16,6 +16,7 @@
 @synthesize dataModelFirst,dataModelSecond,delegate;
 
 
+//Creating singleton, one of the most popular way. dispatch_once will be called only once.
 +(id)sharedManager {
     
     static ClientFramworkAutomation *sharedMyManager = nil;
@@ -42,6 +43,10 @@
     return self;
 }
 
+
+//Creating a heart beat type scenario. Auusme a service which is fetchign some data at regular 2 sec interval from server.
+//Imagine a server where you have to hit and get data every 2 sec.
+
 -(void)startAutomation{
 
     // This can be represented as a service which is hitting a server every 2 second and getting some data to show to custom view.
@@ -51,6 +56,8 @@
                                    userInfo:nil
                                     repeats:YES];
 }
+
+//Call back with Block , use of NSTimer + Block Category to use NSTimer block call back.
 -(void)runLoopWithBlock:(CallBackBlock)serviceCallback{
     
    [NSTimer scheduledTimerWithTimeInterval:2.0 block:^
@@ -60,6 +67,8 @@
         
     } repeats:YES];
 }
+
+//Call back with delegate.
 -(void)findData{
 
     dataModelFirst.fetchedValue = (double)rand();

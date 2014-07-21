@@ -9,6 +9,5 @@
 #import "ServiceDatamodel.h"
 
 @implementation ServiceDatamodel
-//@synthesize name,place,ssn;
 @synthesize fetchedValue;
 @end
