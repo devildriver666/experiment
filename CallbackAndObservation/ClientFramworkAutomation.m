@@ -35,26 +35,22 @@
         [dataModelFirst setValue:[NSNumber numberWithDouble:1.0] forKeyPath:@"fetchedValue"];
         dataModelSecond = [[ServiceDatamodel alloc]init];
         
-        //Fetching initial value for example.
-        NSString *initialNumber = [dataModelFirst valueForKey:@"fetchedValue"];
-        NSLog(@"initial value = %@", initialNumber);
-        
-        
-
+         //Fetching initial value for example.
+         NSString *initialNumber = [dataModelFirst valueForKey:@"fetchedValue"];
+         NSLog(@"initial value = %@", initialNumber);
     }
     return self;
 }
 
 -(void)startAutomation{
 
+    // This can be represented as a service which is hitting a server every 2 second and getting some data to show to custom view.
     [NSTimer scheduledTimerWithTimeInterval:2.0
                                      target:self
                                    selector:@selector(findData)
                                    userInfo:nil
                                     repeats:YES];
 }
-
-
 -(void)runLoopWithBlock:(CallBackBlock)serviceCallback{
     
    [NSTimer scheduledTimerWithTimeInterval:2.0 block:^
