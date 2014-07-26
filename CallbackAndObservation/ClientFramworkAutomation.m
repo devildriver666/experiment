@@ -13,7 +13,7 @@
 
 
 @implementation ClientFramworkAutomation
-@synthesize dataModelFirst,dataModelSecond,delegate;
+//@synthesize dataModelFirst,dataModelSecond,delegate; (no point synthesizing properties now, complier directly does that for you and any property can be used by "self.property" or in form of iVar just by putting an underscore  "_" prefix as _property)
 
 
 //Creating singleton, one of the most popular way. dispatch_once will be called only once.
@@ -30,14 +30,14 @@
 - (id)init {
     if (self = [super init]) {
         
-        dataModelFirst = [[ServiceDatamodel alloc]init];
+        self.dataModelFirst = [[ServiceDatamodel alloc]init];
         
         //Just an example for Key Value Coading. Assigning initial value.
-        [dataModelFirst setValue:[NSNumber numberWithDouble:1.0] forKeyPath:@"fetchedValue"];
-        dataModelSecond = [[ServiceDatamodel alloc]init];
+        [self.dataModelFirst setValue:[NSNumber numberWithDouble:1.0] forKeyPath:@"fetchedValue"];
+        self.dataModelSecond = [[ServiceDatamodel alloc]init];
         
-         //Fetching initial value for example.
-         NSString *initialNumber = [dataModelFirst valueForKey:@"fetchedValue"];
+         //Fetching initial value just for example.
+         NSString *initialNumber = [self.dataModelFirst valueForKey:@"fetchedValue"];
          NSLog(@"initial value = %@", initialNumber);
     }
     return self;
@@ -62,8 +62,8 @@
     
    [NSTimer scheduledTimerWithTimeInterval:2.0 block:^
     {
-        dataModelSecond.fetchedValue = (double)rand();
-        serviceCallback(dataModelSecond.fetchedValue);
+        self.dataModelSecond.fetchedValue = (double)rand();
+        serviceCallback(self.dataModelSecond.fetchedValue);
         
     } repeats:YES];
 }
@@ -71,8 +71,8 @@
 //Call back with delegate.
 -(void)findData{
 
-    dataModelFirst.fetchedValue = (double)rand();
-    [[self delegate] getData:dataModelFirst.fetchedValue];
+    self.dataModelFirst.fetchedValue = (double)rand();
+    [[self delegate] getData:self.dataModelFirst.fetchedValue];
 }
 
     
