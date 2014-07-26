@@ -12,4 +12,6 @@ This simple example will explain 5 things.
 
 Other than these things it will explain how to use singleton efficiently with callbacks.
 
+This code is totally free and any one can use it for any purpose.
+
 Thank You
