@@ -1,6 +1,6 @@
 HI EVERYBODY
 
-This is a sort example for how to create a Singleton and How to work with different call back mechanisms. This is totally for newbies who have started working on iOS applications but after a point they are not able to move fast.
+This is a short and simple example for tutorial purpose and it explaines how to create a Singleton and How to work with different call back mechanisms. This is totally for newbies who have started working on iOS applications but after a point they are not able to move fast.
 
 This simple example will explain 5 things. 
 
